@@ -10,12 +10,6 @@ import QuickStart from "components/QuickStart";
 const APP_ID = process.env.REACT_APP_MORALIS_APPLICATION_ID;
 const SERVER_URL = process.env.REACT_APP_MORALIS_SERVER_URL;
 
-app.use(express.static(__dirname)); //here is important thing - no static directory, because all static :)
-
-app.get("/*", function(req, res) {
-  res.sendFile(path.join(__dirname, "index.html"));
-});
-
 const Application = () => {
   const isServerInfo = APP_ID && SERVER_URL ? true : false;
   //Validate
